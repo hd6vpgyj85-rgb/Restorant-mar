@@ -116,8 +116,7 @@ h1, h2, h3, h4 {
 
 .site-header.is-scrolled {
   padding-block: 1rem;
-  background-color: rgba(var(--color-ink-rgb), 0.92);
-  backdrop-filter: blur(6px);
+  background-color: var(--color-ink);
 }
 
 .logo {
