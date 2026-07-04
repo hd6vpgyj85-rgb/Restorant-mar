@@ -1,0 +1,695 @@
+/* ==========================================================================
+   MAREA — Restaurante de mariscos
+   Sistema de diseño: minimalista, jerarquía tipográfica y espacio en blanco.
+   Regla estructural: no se usan bordes salvo en botones (.btn) y tarjetas (.card).
+   Tipografía: Libre Baskerville (revival de la fuente inglesa de John Baskerville).
+   ========================================================================== */
+
+:root {
+  /* Paleta de 3 colores */
+  --color-ink: #0f2233;        /* azul marino profundo — texto principal / fondos oscuros */
+  --color-ivory: #f6f1e7;      /* marfil cálido — fondo principal */
+  --color-brass: #a9803f;      /* latón / dorado envejecido — acentos */
+
+  --color-ink-rgb: 15, 34, 51;
+  --color-brass-rgb: 169, 128, 63;
+
+  --color-ivory-soft: #efe8d8; /* variación tenue del marfil para separar secciones */
+  --color-brass-deep: #8a6830; /* dorado en estado hover/activo */
+
+  --font-display: 'Libre Baskerville', 'Georgia', serif;
+
+  --container-width: 1180px;
+  --gutter: clamp(1.5rem, 4vw, 4rem);
+
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ---------- Reset ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+h1, h2, h3, h4,
+p, figure, blockquote {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* ---------- Base ---------- */
+body {
+  font-family: var(--font-display);
+  background-color: var(--color-ivory);
+  color: var(--color-ink);
+  font-weight: 400;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* Utilidad de entrecomillado / kicker eliminada a propósito: el sitio
+   no usa etiquetas de sección ni indicadores genéricos. La jerarquía
+   se resuelve con tamaño, peso e interlineado tipográfico. */
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.15;
+}
+
+.eyebrow-none { display: none; } /* reservado, no se usa: sin etiquetas de sección */
+
+/* ---------- Encabezado / navegación ---------- */
+.site-header {
+  position: fixed;
+  inset-inline: 0;
+  top: 0;
+  z-index: 100;
+  padding-block: clamp(1.25rem, 3vw, 2rem);
+  transition: padding var(--ease) 0.35s, background-color var(--ease) 0.35s;
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-header.is-scrolled {
+  padding-block: 1rem;
+  background-color: rgba(var(--color-ink-rgb), 0.92);
+  backdrop-filter: blur(6px);
+}
+
+.logo {
+  font-size: clamp(1.35rem, 2vw, 1.6rem);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: inherit;
+}
+
+.main-nav ul {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.75rem, 3vw, 3rem);
+}
+
+.main-nav a {
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.86;
+  transition: opacity var(--ease) 0.25s;
+}
+
+.main-nav a:hover,
+.main-nav a.is-active {
+  opacity: 1;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 18px;
+}
+
+.nav-toggle span {
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: currentColor;
+}
+
+/* Encabezado y navegación sobre fondo oscuro (hero) por defecto */
+.site-header,
+.site-header .logo,
+.site-header .main-nav a,
+.site-header .nav-toggle {
+  color: var(--color-ivory);
+}
+
+/* Variante para páginas / estados con fondo claro bajo el encabezado */
+.site-header.on-light .logo,
+.site-header.on-light .main-nav a,
+.site-header.on-light .nav-toggle {
+  color: var(--color-ink);
+}
+
+/* ---------- Botones ---------- */
+.btn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 1px solid currentColor;
+  transition: background-color var(--ease) 0.3s, color var(--ease) 0.3s, border-color var(--ease) 0.3s;
+}
+
+.btn--primary {
+  color: var(--color-ivory);
+  border-color: var(--color-brass);
+  background-color: var(--color-brass);
+}
+
+.btn--primary:hover {
+  background-color: transparent;
+  color: var(--color-brass);
+}
+
+.btn--outline {
+  color: var(--color-ivory);
+  border-color: rgba(246, 241, 231, 0.55);
+  background-color: transparent;
+}
+
+.btn--outline:hover {
+  border-color: var(--color-ivory);
+  background-color: var(--color-ivory);
+  color: var(--color-ink);
+}
+
+.btn--dark {
+  color: var(--color-ink);
+  border-color: var(--color-ink);
+  background-color: transparent;
+}
+
+.btn--dark:hover {
+  background-color: var(--color-ink);
+  color: var(--color-ivory);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  color: var(--color-ivory);
+  background-color: var(--color-ink);
+}
+
+.hero__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(var(--color-ink-rgb), 0.55) 0%,
+    rgba(var(--color-ink-rgb), 0.35) 45%,
+    rgba(var(--color-ink-rgb), 0.85) 100%
+  );
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  padding-block: clamp(3rem, 8vw, 6rem);
+  max-width: 42rem;
+}
+
+.hero__title {
+  font-size: clamp(2.75rem, 7vw, 5.25rem);
+  margin-bottom: 1.5rem;
+}
+
+.hero__subtitle {
+  font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+  font-style: italic;
+  font-weight: 400;
+  opacity: 0.92;
+  max-width: 34rem;
+  margin-bottom: 2.5rem;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+/* Hero reducido, usado en la página de Menú */
+.hero--compact {
+  min-height: 62vh;
+  align-items: center;
+}
+
+.hero--compact .hero__content {
+  text-align: center;
+  max-width: 46rem;
+  margin-inline: auto;
+}
+
+/* ---------- Secciones genéricas ---------- */
+section {
+  padding-block: clamp(5rem, 11vw, 9rem);
+}
+
+.section--soft {
+  background-color: var(--color-ivory-soft);
+}
+
+.section-heading {
+  max-width: 42rem;
+  margin-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.section-heading--center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.section-heading h2 {
+  font-size: clamp(2.1rem, 4vw, 3.1rem);
+  margin-bottom: 1.25rem;
+}
+
+.section-heading p {
+  font-size: 1.05rem;
+  opacity: 0.78;
+}
+
+/* ---------- Nosotros / historia (imagen + texto) ---------- */
+.about {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2.5rem, 6vw, 5rem);
+  align-items: center;
+}
+
+.about__media img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.about__body h2 {
+  font-size: clamp(2rem, 4vw, 2.9rem);
+  margin-bottom: 1.5rem;
+}
+
+.about__body p {
+  opacity: 0.82;
+  max-width: 34rem;
+  margin-bottom: 1.25rem;
+}
+
+.about__body p:last-of-type {
+  margin-bottom: 2rem;
+}
+
+/* ---------- Tarjetas (única excepción de borde junto con .btn) ---------- */
+.dishes__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+.card {
+  border: 1px solid rgba(var(--color-ink-rgb), 0.16);
+  background-color: var(--color-ivory);
+  display: flex;
+  flex-direction: column;
+}
+
+.card__media img {
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+}
+
+.card__body {
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.card__row h3 {
+  font-size: 1.25rem;
+}
+
+.card__price {
+  font-size: 1.05rem;
+  color: var(--color-brass-deep);
+  white-space: nowrap;
+}
+
+.card__body p {
+  opacity: 0.75;
+  font-size: 0.95rem;
+}
+
+/* ---------- Galería / ambiente ---------- */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(0.75rem, 2vw, 1.25rem);
+}
+
+.gallery__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery__item--tall,
+.gallery__item--wide {
+  aspect-ratio: 4 / 3;
+}
+
+/* ---------- Cita ---------- */
+.quote {
+  text-align: center;
+  max-width: 46rem;
+  margin-inline: auto;
+}
+
+.quote blockquote {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-style: italic;
+  line-height: 1.5;
+  margin-bottom: 1.75rem;
+}
+
+.quote cite {
+  display: block;
+  font-style: normal;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+/* ---------- Reservas / contacto ---------- */
+.reserve {
+  background-color: var(--color-ink);
+  color: var(--color-ivory);
+}
+
+.reserve__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2.5rem, 6vw, 5rem);
+  align-items: center;
+}
+
+.reserve__body h2 {
+  font-size: clamp(2.1rem, 4vw, 3rem);
+  margin-bottom: 1.25rem;
+}
+
+.reserve__body p {
+  opacity: 0.78;
+  max-width: 32rem;
+  margin-bottom: 2rem;
+}
+
+.reserve__details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.reserve__details h4 {
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin-bottom: 0.4rem;
+}
+
+.reserve__details p {
+  opacity: 0.92;
+}
+
+.reserve__media img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+/* ---------- Menú (listado de platos) ---------- */
+.menu-category {
+  max-width: 46rem;
+  margin-inline: auto;
+  margin-bottom: clamp(3.5rem, 8vw, 6rem);
+}
+
+.menu-category:last-child {
+  margin-bottom: 0;
+}
+
+.menu-category__title {
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  text-align: center;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1.5rem;
+  padding-block: 1.1rem;
+}
+
+.menu-item + .menu-item {
+  margin-top: 0.15rem;
+}
+
+.menu-item__name {
+  font-size: 1.15rem;
+}
+
+.menu-item__desc {
+  display: block;
+  font-size: 0.9rem;
+  font-style: italic;
+  opacity: 0.62;
+  margin-top: 0.35rem;
+  max-width: 30rem;
+}
+
+.menu-item__price {
+  font-size: 1.05rem;
+  color: var(--color-brass-deep);
+  white-space: nowrap;
+}
+
+.menu-note {
+  text-align: center;
+  max-width: 34rem;
+  margin: clamp(3rem, 6vw, 4.5rem) auto 0;
+  font-size: 0.9rem;
+  font-style: italic;
+  opacity: 0.6;
+}
+
+/* ---------- Pie de página ---------- */
+.site-footer {
+  background-color: var(--color-ink);
+  color: var(--color-ivory);
+  padding-block: clamp(3.5rem, 7vw, 5rem) clamp(2rem, 4vw, 2.5rem);
+}
+
+.site-footer__top {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2rem, 4vw, 3rem);
+  padding-bottom: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.site-footer__logo {
+  font-size: 1.5rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.site-footer__tagline {
+  opacity: 0.65;
+  max-width: 26rem;
+  font-style: italic;
+}
+
+.site-footer__nav ul,
+.site-footer__social ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.site-footer__nav a,
+.site-footer__social a {
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  opacity: 0.75;
+  transition: opacity var(--ease) 0.25s;
+}
+
+.site-footer__nav a:hover,
+.site-footer__social a:hover {
+  opacity: 1;
+}
+
+.site-footer__bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-top: clamp(2rem, 4vw, 2.5rem);
+  font-size: 0.8rem;
+  opacity: 0.55;
+}
+
+/* ---------- Responsive ---------- */
+@media (min-width: 640px) {
+  .dishes__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .site-footer__top {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .site-footer__bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 860px) {
+  .about {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about__media--right {
+    order: 2;
+  }
+
+  .reserve__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 900px) {
+  .dishes__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 859px) {
+  .main-nav {
+    position: fixed;
+    inset: 0;
+    z-index: 90;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-ink);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity var(--ease) 0.35s, visibility var(--ease) 0.35s, transform var(--ease) 0.35s;
+  }
+
+  .main-nav.is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 2.25rem;
+    text-align: center;
+  }
+
+  .main-nav a {
+    color: var(--color-ivory);
+    font-size: 1.4rem;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+}
+
+@media (max-width: 639px) {
+  .menu-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+}

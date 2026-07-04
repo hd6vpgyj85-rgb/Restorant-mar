@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú — Marea</title>
+  <meta name="description" content="Carta de Marea: entrantes, especialidades del mar, platos principales, postres y vinos.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- INSERTAR AQUÍ: favicon del restaurante (mismo archivo que en index.html). -->
+  <link rel="icon" href="assets/images/favicon.png" type="image/png">
+</head>
+<body>
+
+  <header class="site-header" data-header>
+    <div class="container site-header__inner">
+      <a href="index.html" class="logo">Marea</a>
+
+      <nav class="main-nav" data-nav id="main-nav">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html#nosotros">Nosotros</a></li>
+          <li><a href="menu.html" class="is-active">Menú</a></li>
+          <li><a href="index.html#reservas">Reservas</a></li>
+        </ul>
+      </nav>
+
+      <button class="nav-toggle" data-nav-toggle aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO DE MENÚ -->
+    <section class="hero hero--compact">
+      <!-- INSERTAR AQUÍ: imagen para la cabecera del menú. Recomendado 1920x1080px, horizontal,
+           puede ser un plano cercano de marisco fresco o una mesa servida. -->
+      <img
+        src="assets/images/hero-menu.jpg"
+        alt="Marisco fresco dispuesto sobre hielo antes de su preparación"
+        class="hero__image"
+      >
+
+      <div class="container hero__content">
+        <h1 class="hero__title">Nuestro Menú</h1>
+        <p class="hero__subtitle">Producto de temporada, cocinado con técnica clásica.</p>
+      </div>
+    </section>
+
+    <!-- CARTA -->
+    <section>
+      <div class="container">
+
+        <div class="menu-category">
+          <h2 class="menu-category__title">Entrantes</h2>
+
+          <div class="menu-item">
+            <div>
+              <span class="menu-item__name">Ostras de la ría</span>
+              <span class="menu-item__desc">Media docena, servidas con vinagreta de chalota</span>
+            </div>
+            <span class="menu-item__price">16€</span>
+          </div>
+
+          <div class="menu-item">
+            <div>
+              <span class="menu-item__name">Croquetas de bogavante</span>
+              <span class="menu-item__desc">Bechamel cremosa y bisque reducido</span>
+            </div>
+            <span class="menu-item__price">14€</span>
+          </div>
+
+          <div class="menu-item">
+            <div>
+              <span class="menu-item__name">Carpaccio de vieira</span>
+              <span class="menu-item__desc">Cítricos, aceite de oliva virgen y sal en escamas</span>
+            </div>
+            <span class="menu-item__price">18€</span>
+          </div>
+
+          <div class="menu-item">
+            <div>
+              <span class="menu-item__name">Pulpo a la brasa</span>
+              <span class="menu-item__desc">Puré de patata ahumada y pimentón</span>
+            </div>
+            <span class="menu-item__price">19€</span>
+          </div>
+        </div>
+
+        <div class="menu-category">
+          <h2 class="menu-category__title">Especialidades del mar</h2>
+
+          <div class="menu-item">
+            <div>
+              <span class="menu-item__name">Rodaballo a la brasa</span>
+              <span class="menu-item__desc">Jugo reducido de marisco y verduras de temporada</span>
+            </div>
+            <span class="menu-item__price">28€</span>
+          </div>
+
+          <div class="menu-item">
+            <div>
+              <span class="menu-item__name">Arroz de bogavante</span>
+              <span class="menu-item__desc">Cocción lenta en cazuela de barro, para compartir</span>
+            </div>
+            <span class="menu-item__price">32€</span>
+          </div>
+
+          <div class="menu-item">
+            <div>
+              <span class="menu-item__name">Lubina salvaje al horno</span>
+              <span class="menu-item__desc">Costra de sal marina y hierbas frescas</span>
+            </div>
+            <span class="menu-item__price">30€</span>
+          </div>
+
+          <div class="menu-item">
+            <div>
+              <span class="menu-item__name">Selección de marisco frío</span>
+              <span class="menu-item__desc">Ostras, gambas y centollo, servidos sobre hielo</span>
+            </div>
+            <span class="menu-item__price">24€</span>
+          </div>
+        </div>
+
+        <div class="menu-category">
+          <h2 class="menu-category__title">Platos principales</h2>
+
+          <div class="menu-item">
+            <div>
+              <span class="menu-item__name">Merluza a la brasa</span>
+              <span class="menu-item__desc">Salsa verde y almejas de temporada</span>
+            </div>
+            <span class="menu-item__price">26€</span>
+          </div>
+
+          <div class="menu-item">
+            <div>
+              <span class="menu-item__name">Fideuá de marisco</span>
+              <span class="menu-item__desc">Alioli casero al momento</span>
+            </div>
+            <span class="menu-item__price">22€</span>
+          </div>
+
+          <div class="menu-item">
+            <div>
+              <span class="menu-item__name">Bacalao confitado</span>
+              <span class="menu-item__desc">Pil pil tradicional y pimiento asado</span>
+            </div>
+            <span class="menu-item__price">25€</span>
+          </div>
+        </div>
+
+        <div class="menu-category">
+          <h2 class="menu-category__title">Postres</h2>
+
+          <div class="menu-item">
+            <div>
+              <span class="menu-item__name">Tarta de queso al horno</span>
+              <span class="menu-item__desc">Reducción de frutos rojos</span>
+            </div>
+            <span class="menu-item__price">9€</span>
+          </div>
+
+          <div class="menu-item">
+            <div>
+              <span class="menu-item__name">Milhojas de crema</span>
+              <span class="menu-item__desc">Vainilla de Madagascar y caramelo tostado</span>
+            </div>
+            <span class="menu-item__price">8€</span>
+          </div>
+
+          <div class="menu-item">
+            <div>
+              <span class="menu-item__name">Sorbete de cítricos</span>
+              <span class="menu-item__desc">Selección según temporada</span>
+            </div>
+            <span class="menu-item__price">7€</span>
+          </div>
+        </div>
+
+        <div class="menu-category">
+          <h2 class="menu-category__title">Bebidas y vinos</h2>
+
+          <div class="menu-item">
+            <div>
+              <span class="menu-item__name">Copa de vino blanco de la casa</span>
+              <span class="menu-item__desc">Selección de bodegas locales</span>
+            </div>
+            <span class="menu-item__price">6€</span>
+          </div>
+
+          <div class="menu-item">
+            <div>
+              <span class="menu-item__name">Copa de albariño</span>
+              <span class="menu-item__desc">Denominación de origen Rías Baixas</span>
+            </div>
+            <span class="menu-item__price">7€</span>
+          </div>
+
+          <div class="menu-item">
+            <div>
+              <span class="menu-item__name">Agua con gas o sin gas</span>
+              <span class="menu-item__desc">Botella de 50cl</span>
+            </div>
+            <span class="menu-item__price">3€</span>
+          </div>
+        </div>
+
+        <p class="menu-note">
+          Precios en euros, impuestos incluidos. Consulte alérgenos con nuestro equipo de sala.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- LLAMADA A RESERVAR -->
+    <section class="reserve" id="reservas">
+      <div class="container">
+        <div class="section-heading section-heading--center" style="margin-bottom: 2rem;">
+          <h2>¿Le apetece probarlo?</h2>
+          <p>Reserve su mesa y descubra la carta completa en persona.</p>
+        </div>
+        <div style="display:flex; justify-content:center;">
+          <a href="mailto:reservas@marea.com" class="btn btn--primary">Reservar mesa</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div>
+          <div class="site-footer__logo">Marea</div>
+          <p class="site-footer__tagline">Cocina de mar, producto fresco.</p>
+        </div>
+
+        <nav class="site-footer__nav">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#nosotros">Nosotros</a></li>
+            <li><a href="menu.html">Menú</a></li>
+            <li><a href="index.html#reservas">Reservas</a></li>
+          </ul>
+        </nav>
+
+        <nav class="site-footer__social">
+          <ul>
+            <!-- Sustituir por los enlaces reales a redes sociales -->
+            <li><a href="#" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="#" target="_blank" rel="noopener">Facebook</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="site-footer__bottom">
+        <span>© 2026 Marea. Todos los derechos reservados.</span>
+        <span>Calle del Puerto 12, Ciudad</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
