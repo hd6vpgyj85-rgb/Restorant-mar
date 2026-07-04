@@ -636,6 +636,13 @@ section {
   opacity: 0.55;
 }
 
+.site-footer__disclaimer {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  font-style: italic;
+  opacity: 0.4;
+}
+
 /* ---------- Responsive ---------- */
 @media (min-width: 640px) {
   .dishes__grid {

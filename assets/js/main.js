@@ -44,6 +44,7 @@ var TRANSLATIONS = {
 
     footer_tagline: 'Cocina de mar, producto fresco.',
     footer_copyright: '© 2026 Marea. Todos los derechos reservados.',
+    footer_ai_disclaimer: 'Las fotografías de este sitio son imágenes generadas con inteligencia artificial.',
 
     menu_hero_title: 'Nuestro Menú',
     menu_hero_subtitle: 'Producto de temporada, cocinado con técnica clásica.',
@@ -141,6 +142,7 @@ var TRANSLATIONS = {
 
     footer_tagline: 'Seafood cuisine, fresh ingredients.',
     footer_copyright: '© 2026 Marea. All rights reserved.',
+    footer_ai_disclaimer: 'The photographs on this site are AI-generated images.',
 
     menu_hero_title: 'Our Menu',
     menu_hero_subtitle: 'Seasonal ingredients, cooked with classic technique.',
