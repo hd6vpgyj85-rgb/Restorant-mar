@@ -21,18 +21,26 @@
     <div class="container site-header__inner">
       <a href="index.html" class="logo">Marea</a>
 
-      <nav class="main-nav" data-nav id="main-nav">
-        <ul>
-          <li><a href="index.html" class="is-active">Inicio</a></li>
-          <li><a href="index.html#nosotros">Nosotros</a></li>
-          <li><a href="menu.html">Menú</a></li>
-          <li><a href="index.html#reservas">Reservas</a></li>
-        </ul>
-      </nav>
+      <div class="site-header__right">
+        <nav class="main-nav" data-nav id="main-nav">
+          <ul>
+            <li><a href="index.html" class="is-active" data-i18n="nav_inicio">Inicio</a></li>
+            <li><a href="index.html#nosotros" data-i18n="nav_nosotros">Nosotros</a></li>
+            <li><a href="menu.html" data-i18n="nav_menu">Menú</a></li>
+            <li><a href="index.html#reservas" data-i18n="nav_reservas">Reservas</a></li>
+          </ul>
+        </nav>
 
-      <button class="nav-toggle" data-nav-toggle aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="main-nav">
-        <span></span><span></span><span></span>
-      </button>
+        <div class="lang-switch" data-lang-switch aria-label="Seleccionar idioma / moneda">
+          <button type="button" class="lang-switch__btn is-active" data-lang-btn="es">ES</button>
+          <span class="lang-switch__divider">/</span>
+          <button type="button" class="lang-switch__btn" data-lang-btn="en">EN</button>
+        </div>
+
+        <button class="nav-toggle" data-nav-toggle aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="main-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -40,20 +48,18 @@
 
     <!-- HERO -->
     <section class="hero">
-      <!-- INSERTAR AQUÍ: imagen principal (hero) del restaurante. Recomendado 1920x1200px o mayor, horizontal,
-           un plato insignia o la sala del restaurante bien iluminada. No alterar la clase "hero__image". -->
       <img
         src="assets/images/hero-principal.jpg"
-        alt="Plato insignia de mariscos servido en la sala principal de Marea"
+        alt="Torre de mariscos servida en la sala principal de Marea"
         class="hero__image"
       >
 
       <div class="container hero__content">
         <h1 class="hero__title">Marea</h1>
-        <p class="hero__subtitle">Cocina de mar, producto fresco y una sala pensada para el detalle.</p>
+        <p class="hero__subtitle" data-i18n="hero_subtitle">Cocina de mar, producto fresco y una sala pensada para el detalle.</p>
         <div class="hero__actions">
-          <a href="menu.html" class="btn btn--primary">Ver el menú</a>
-          <a href="index.html#reservas" class="btn btn--outline">Reservar mesa</a>
+          <a href="menu.html" class="btn btn--primary" data-i18n="hero_cta_menu">Ver el menú</a>
+          <a href="#" class="btn btn--outline" data-whatsapp-cta data-i18n="hero_cta_reserve">Reservar mesa</a>
         </div>
       </div>
     </section>
@@ -62,24 +68,23 @@
     <section id="nosotros">
       <div class="container about">
         <div class="about__media">
-          <!-- INSERTAR AQUÍ: fotografía del chef, la cocina o el equipo en sala. Formato vertical, relación 4:5. -->
           <img
             src="assets/images/nosotros.jpg"
-            alt="El chef de Marea preparando un plato de mariscos en la cocina"
+            alt="La chef de Marea preparando un guiso de mariscos en la cocina"
           >
         </div>
         <div class="about__body">
-          <h2>Una cocina con memoria de puerto</h2>
-          <p>
+          <h2 data-i18n="about_title">Una cocina con memoria de puerto</h2>
+          <p data-i18n="about_p1">
             En Marea trabajamos con lo que el mar entrega cada mañana. La lonja marca la carta,
             no al revés: el pescado y el marisco llegan el mismo día y se cocinan con técnica
             clásica y mano ligera, dejando que el producto hable por sí solo.
           </p>
-          <p>
+          <p data-i18n="about_p2">
             La sala se pensó para acompañar esa misma idea: materiales cálidos, luz baja y mesas
             espaciadas, para que la conversación y el plato tengan el protagonismo.
           </p>
-          <a href="menu.html" class="btn btn--dark">Descubrir el menú</a>
+          <a href="menu.html" class="btn btn--dark" data-i18n="about_cta">Descubrir el menú</a>
         </div>
       </div>
     </section>
@@ -88,50 +93,47 @@
     <section class="section--soft">
       <div class="container">
         <div class="section-heading section-heading--center">
-          <h2>Platos que nos representan</h2>
-          <p>Una selección breve de la carta, la que mejor resume nuestra cocina.</p>
+          <h2 data-i18n="dishes_title">Platos que nos representan</h2>
+          <p data-i18n="dishes_subtitle">Una selección breve de la carta, la que mejor resume nuestra cocina.</p>
         </div>
 
         <div class="dishes__grid">
           <article class="card">
             <div class="card__media">
-              <!-- INSERTAR AQUÍ: fotografía del plato "Rodaballo a la brasa". Formato horizontal, relación 5:4. -->
               <img src="assets/images/plato-01.jpg" alt="Rodaballo a la brasa con guarnición de temporada">
             </div>
             <div class="card__body">
               <div class="card__row">
-                <h3>Rodaballo a la brasa</h3>
-                <span class="card__price">28€</span>
+                <h3 data-i18n="dish1_name">Rodaballo a la brasa</h3>
+                <span class="card__price" data-price="520">$520 MXN</span>
               </div>
-              <p>Con jugo reducido de marisco y verduras de temporada.</p>
+              <p data-i18n="dish1_desc">Con jugo reducido de marisco y verduras de temporada.</p>
             </div>
           </article>
 
           <article class="card">
             <div class="card__media">
-              <!-- INSERTAR AQUÍ: fotografía del plato "Arroz de bogavante". Formato horizontal, relación 5:4. -->
               <img src="assets/images/plato-02.jpg" alt="Arroz de bogavante servido en cazuela de barro">
             </div>
             <div class="card__body">
               <div class="card__row">
-                <h3>Arroz de bogavante</h3>
-                <span class="card__price">32€</span>
+                <h3 data-i18n="dish2_name">Arroz de bogavante</h3>
+                <span class="card__price" data-price="580">$580 MXN</span>
               </div>
-              <p>Cocción lenta en cazuela de barro, para compartir.</p>
+              <p data-i18n="dish2_desc">Cocción lenta en cazuela de barro, para compartir.</p>
             </div>
           </article>
 
           <article class="card">
             <div class="card__media">
-              <!-- INSERTAR AQUÍ: fotografía del plato "Ostras y marisco frío". Formato horizontal, relación 5:4. -->
-              <img src="assets/images/plato-03.jpg" alt="Selección de ostras y marisco frío sobre hielo">
+              <img src="assets/images/plato-03.jpg" alt="Selección de ostras, camarón y jaiba sobre hielo">
             </div>
             <div class="card__body">
               <div class="card__row">
-                <h3>Selección de marisco frío</h3>
-                <span class="card__price">24€</span>
+                <h3 data-i18n="dish3_name">Selección de marisco frío</h3>
+                <span class="card__price" data-price="460">$460 MXN</span>
               </div>
-              <p>Ostras, gambas y centollo, servidos sobre hielo.</p>
+              <p data-i18n="dish3_desc">Ostras, gambas y centollo, servidos sobre hielo.</p>
             </div>
           </article>
         </div>
@@ -142,8 +144,8 @@
     <section>
       <div class="container">
         <div class="section-heading">
-          <h2>La sala</h2>
-          <p>Un espacio pensado para que el tiempo pase despacio.</p>
+          <h2 data-i18n="gallery_title">La sala</h2>
+          <p data-i18n="gallery_subtitle">Un espacio pensado para que el tiempo pase despacio.</p>
         </div>
 
         <div class="gallery">
@@ -166,10 +168,10 @@
     <!-- CITA -->
     <section class="section--soft">
       <div class="container quote">
-        <blockquote>
+        <blockquote data-i18n="quote_text">
           «El producto fresco no necesita artificio: solo tiempo, respeto y una brasa bien encendida.»
         </blockquote>
-        <cite>Cocina de Marea</cite>
+        <cite data-i18n="quote_cite">Cocina de Marea</cite>
       </div>
     </section>
 
@@ -177,30 +179,29 @@
     <section class="reserve" id="reservas">
       <div class="container reserve__grid">
         <div class="reserve__body">
-          <h2>Reserve su mesa</h2>
-          <p>
+          <h2 data-i18n="reserve_title">Reserve su mesa</h2>
+          <p data-i18n="reserve_p">
             Recomendamos reservar con antelación, especialmente los fines de semana.
             Atendemos grupos y celebraciones bajo petición.
           </p>
 
           <div class="reserve__details">
             <div>
-              <h4>Dirección</h4>
+              <h4 data-i18n="reserve_dir_label">Dirección</h4>
               <!-- Sustituir por la dirección real del restaurante -->
-              <p>Calle del Puerto 12, Ciudad</p>
+              <p>Calle del Puerto 12, Ciudad Juárez, Chihuahua</p>
             </div>
             <div>
-              <h4>Horario</h4>
-              <p>Martes a domingo · 13:00–16:00 / 20:00–23:30</p>
+              <h4 data-i18n="reserve_hours_label">Horario</h4>
+              <p data-i18n="reserve_hours_value">Martes a domingo · 13:00–16:00 / 20:00–23:30</p>
             </div>
             <div>
-              <h4>Contacto</h4>
-              <!-- Sustituir por el teléfono y correo reales -->
-              <p>+34 900 000 000 · reservas@marea.com</p>
+              <h4 data-i18n="reserve_contact_label">Contacto</h4>
+              <p>+52 656 859 6503 · iygd505@gmail.com</p>
             </div>
           </div>
 
-          <a href="mailto:reservas@marea.com" class="btn btn--primary" style="margin-top: 2rem;">Reservar por correo</a>
+          <a href="#" class="btn btn--primary" data-whatsapp-cta data-i18n="reserve_cta" style="margin-top: 2rem;">Reservar por WhatsApp</a>
         </div>
 
         <div class="reserve__media">
@@ -217,30 +218,29 @@
       <div class="site-footer__top">
         <div>
           <div class="site-footer__logo">Marea</div>
-          <p class="site-footer__tagline">Cocina de mar, producto fresco.</p>
+          <p class="site-footer__tagline" data-i18n="footer_tagline">Cocina de mar, producto fresco.</p>
         </div>
 
         <nav class="site-footer__nav">
           <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="index.html#nosotros">Nosotros</a></li>
-            <li><a href="menu.html">Menú</a></li>
-            <li><a href="index.html#reservas">Reservas</a></li>
+            <li><a href="index.html" data-i18n="nav_inicio">Inicio</a></li>
+            <li><a href="index.html#nosotros" data-i18n="nav_nosotros">Nosotros</a></li>
+            <li><a href="menu.html" data-i18n="nav_menu">Menú</a></li>
+            <li><a href="index.html#reservas" data-i18n="nav_reservas">Reservas</a></li>
           </ul>
         </nav>
 
         <nav class="site-footer__social">
           <ul>
-            <!-- Sustituir por los enlaces reales a redes sociales -->
-            <li><a href="#" target="_blank" rel="noopener">Instagram</a></li>
-            <li><a href="#" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="https://www.instagram.com/net._.ly?igsh=cXN5MW1randmbnY5&utm_source=qr" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.facebook.com/share/1BLSXnrDD1/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook</a></li>
           </ul>
         </nav>
       </div>
 
       <div class="site-footer__bottom">
-        <span>© 2026 Marea. Todos los derechos reservados.</span>
-        <span>Calle del Puerto 12, Ciudad</span>
+        <span data-i18n="footer_copyright">© 2026 Marea. Todos los derechos reservados.</span>
+        <span>Calle del Puerto 12, Ciudad Juárez, Chihuahua</span>
       </div>
     </div>
   </footer>

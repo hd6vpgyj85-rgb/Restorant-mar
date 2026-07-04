@@ -21,18 +21,26 @@
     <div class="container site-header__inner">
       <a href="index.html" class="logo">Marea</a>
 
-      <nav class="main-nav" data-nav id="main-nav">
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="index.html#nosotros">Nosotros</a></li>
-          <li><a href="menu.html" class="is-active">Menú</a></li>
-          <li><a href="index.html#reservas">Reservas</a></li>
-        </ul>
-      </nav>
+      <div class="site-header__right">
+        <nav class="main-nav" data-nav id="main-nav">
+          <ul>
+            <li><a href="index.html" data-i18n="nav_inicio">Inicio</a></li>
+            <li><a href="index.html#nosotros" data-i18n="nav_nosotros">Nosotros</a></li>
+            <li><a href="menu.html" class="is-active" data-i18n="nav_menu">Menú</a></li>
+            <li><a href="index.html#reservas" data-i18n="nav_reservas">Reservas</a></li>
+          </ul>
+        </nav>
 
-      <button class="nav-toggle" data-nav-toggle aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="main-nav">
-        <span></span><span></span><span></span>
-      </button>
+        <div class="lang-switch" data-lang-switch aria-label="Seleccionar idioma / moneda">
+          <button type="button" class="lang-switch__btn is-active" data-lang-btn="es">ES</button>
+          <span class="lang-switch__divider">/</span>
+          <button type="button" class="lang-switch__btn" data-lang-btn="en">EN</button>
+        </div>
+
+        <button class="nav-toggle" data-nav-toggle aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="main-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -40,8 +48,6 @@
 
     <!-- HERO DE MENÚ -->
     <section class="hero hero--compact">
-      <!-- INSERTAR AQUÍ: imagen para la cabecera del menú. Recomendado 1920x1080px, horizontal,
-           puede ser un plano cercano de marisco fresco o una mesa servida. -->
       <img
         src="assets/images/hero-menu.jpg"
         alt="Marisco fresco dispuesto sobre hielo antes de su preparación"
@@ -49,8 +55,8 @@
       >
 
       <div class="container hero__content">
-        <h1 class="hero__title">Nuestro Menú</h1>
-        <p class="hero__subtitle">Producto de temporada, cocinado con técnica clásica.</p>
+        <h1 class="hero__title" data-i18n="menu_hero_title">Nuestro Menú</h1>
+        <p class="hero__subtitle" data-i18n="menu_hero_subtitle">Producto de temporada, cocinado con técnica clásica.</p>
       </div>
     </section>
 
@@ -59,163 +65,163 @@
       <div class="container">
 
         <div class="menu-category">
-          <h2 class="menu-category__title">Entrantes</h2>
+          <h2 class="menu-category__title" data-i18n="cat_entrantes">Entrantes</h2>
 
           <div class="menu-item">
             <div>
-              <span class="menu-item__name">Ostras de la ría</span>
-              <span class="menu-item__desc">Media docena, servidas con vinagreta de chalota</span>
+              <span class="menu-item__name" data-i18n="item1_name">Ostras de la ría</span>
+              <span class="menu-item__desc" data-i18n="item1_desc">Media docena, servidas con vinagreta de chalota</span>
             </div>
-            <span class="menu-item__price">16€</span>
+            <span class="menu-item__price" data-price="320">$320 MXN</span>
           </div>
 
           <div class="menu-item">
             <div>
-              <span class="menu-item__name">Croquetas de bogavante</span>
-              <span class="menu-item__desc">Bechamel cremosa y bisque reducido</span>
+              <span class="menu-item__name" data-i18n="item2_name">Croquetas de bogavante</span>
+              <span class="menu-item__desc" data-i18n="item2_desc">Bechamel cremosa y bisque reducido</span>
             </div>
-            <span class="menu-item__price">14€</span>
+            <span class="menu-item__price" data-price="280">$280 MXN</span>
           </div>
 
           <div class="menu-item">
             <div>
-              <span class="menu-item__name">Carpaccio de vieira</span>
-              <span class="menu-item__desc">Cítricos, aceite de oliva virgen y sal en escamas</span>
+              <span class="menu-item__name" data-i18n="item3_name">Carpaccio de vieira</span>
+              <span class="menu-item__desc" data-i18n="item3_desc">Cítricos, aceite de oliva virgen y sal en escamas</span>
             </div>
-            <span class="menu-item__price">18€</span>
+            <span class="menu-item__price" data-price="340">$340 MXN</span>
           </div>
 
           <div class="menu-item">
             <div>
-              <span class="menu-item__name">Pulpo a la brasa</span>
-              <span class="menu-item__desc">Puré de patata ahumada y pimentón</span>
+              <span class="menu-item__name" data-i18n="item4_name">Pulpo a la brasa</span>
+              <span class="menu-item__desc" data-i18n="item4_desc">Puré de patata ahumada y pimentón</span>
             </div>
-            <span class="menu-item__price">19€</span>
-          </div>
-        </div>
-
-        <div class="menu-category">
-          <h2 class="menu-category__title">Especialidades del mar</h2>
-
-          <div class="menu-item">
-            <div>
-              <span class="menu-item__name">Rodaballo a la brasa</span>
-              <span class="menu-item__desc">Jugo reducido de marisco y verduras de temporada</span>
-            </div>
-            <span class="menu-item__price">28€</span>
-          </div>
-
-          <div class="menu-item">
-            <div>
-              <span class="menu-item__name">Arroz de bogavante</span>
-              <span class="menu-item__desc">Cocción lenta en cazuela de barro, para compartir</span>
-            </div>
-            <span class="menu-item__price">32€</span>
-          </div>
-
-          <div class="menu-item">
-            <div>
-              <span class="menu-item__name">Lubina salvaje al horno</span>
-              <span class="menu-item__desc">Costra de sal marina y hierbas frescas</span>
-            </div>
-            <span class="menu-item__price">30€</span>
-          </div>
-
-          <div class="menu-item">
-            <div>
-              <span class="menu-item__name">Selección de marisco frío</span>
-              <span class="menu-item__desc">Ostras, gambas y centollo, servidos sobre hielo</span>
-            </div>
-            <span class="menu-item__price">24€</span>
+            <span class="menu-item__price" data-price="360">$360 MXN</span>
           </div>
         </div>
 
         <div class="menu-category">
-          <h2 class="menu-category__title">Platos principales</h2>
+          <h2 class="menu-category__title" data-i18n="cat_mar">Especialidades del mar</h2>
 
           <div class="menu-item">
             <div>
-              <span class="menu-item__name">Merluza a la brasa</span>
-              <span class="menu-item__desc">Salsa verde y almejas de temporada</span>
+              <span class="menu-item__name" data-i18n="item5_name">Rodaballo a la brasa</span>
+              <span class="menu-item__desc" data-i18n="item5_desc">Jugo reducido de marisco y verduras de temporada</span>
             </div>
-            <span class="menu-item__price">26€</span>
+            <span class="menu-item__price" data-price="520">$520 MXN</span>
           </div>
 
           <div class="menu-item">
             <div>
-              <span class="menu-item__name">Fideuá de marisco</span>
-              <span class="menu-item__desc">Alioli casero al momento</span>
+              <span class="menu-item__name" data-i18n="item6_name">Arroz de bogavante</span>
+              <span class="menu-item__desc" data-i18n="item6_desc">Cocción lenta en cazuela de barro, para compartir</span>
             </div>
-            <span class="menu-item__price">22€</span>
+            <span class="menu-item__price" data-price="580">$580 MXN</span>
           </div>
 
           <div class="menu-item">
             <div>
-              <span class="menu-item__name">Bacalao confitado</span>
-              <span class="menu-item__desc">Pil pil tradicional y pimiento asado</span>
+              <span class="menu-item__name" data-i18n="item7_name">Lubina salvaje al horno</span>
+              <span class="menu-item__desc" data-i18n="item7_desc">Costra de sal marina y hierbas frescas</span>
             </div>
-            <span class="menu-item__price">25€</span>
-          </div>
-        </div>
-
-        <div class="menu-category">
-          <h2 class="menu-category__title">Postres</h2>
-
-          <div class="menu-item">
-            <div>
-              <span class="menu-item__name">Tarta de queso al horno</span>
-              <span class="menu-item__desc">Reducción de frutos rojos</span>
-            </div>
-            <span class="menu-item__price">9€</span>
+            <span class="menu-item__price" data-price="560">$560 MXN</span>
           </div>
 
           <div class="menu-item">
             <div>
-              <span class="menu-item__name">Milhojas de crema</span>
-              <span class="menu-item__desc">Vainilla de Madagascar y caramelo tostado</span>
+              <span class="menu-item__name" data-i18n="item8_name">Selección de marisco frío</span>
+              <span class="menu-item__desc" data-i18n="item8_desc">Ostras, gambas y centollo, servidos sobre hielo</span>
             </div>
-            <span class="menu-item__price">8€</span>
-          </div>
-
-          <div class="menu-item">
-            <div>
-              <span class="menu-item__name">Sorbete de cítricos</span>
-              <span class="menu-item__desc">Selección según temporada</span>
-            </div>
-            <span class="menu-item__price">7€</span>
+            <span class="menu-item__price" data-price="460">$460 MXN</span>
           </div>
         </div>
 
         <div class="menu-category">
-          <h2 class="menu-category__title">Bebidas y vinos</h2>
+          <h2 class="menu-category__title" data-i18n="cat_principales">Platos principales</h2>
 
           <div class="menu-item">
             <div>
-              <span class="menu-item__name">Copa de vino blanco de la casa</span>
-              <span class="menu-item__desc">Selección de bodegas locales</span>
+              <span class="menu-item__name" data-i18n="item9_name">Merluza a la brasa</span>
+              <span class="menu-item__desc" data-i18n="item9_desc">Salsa verde y almejas de temporada</span>
             </div>
-            <span class="menu-item__price">6€</span>
+            <span class="menu-item__price" data-price="480">$480 MXN</span>
           </div>
 
           <div class="menu-item">
             <div>
-              <span class="menu-item__name">Copa de albariño</span>
-              <span class="menu-item__desc">Denominación de origen Rías Baixas</span>
+              <span class="menu-item__name" data-i18n="item10_name">Fideuá de marisco</span>
+              <span class="menu-item__desc" data-i18n="item10_desc">Alioli casero al momento</span>
             </div>
-            <span class="menu-item__price">7€</span>
+            <span class="menu-item__price" data-price="420">$420 MXN</span>
           </div>
 
           <div class="menu-item">
             <div>
-              <span class="menu-item__name">Agua con gas o sin gas</span>
-              <span class="menu-item__desc">Botella de 50cl</span>
+              <span class="menu-item__name" data-i18n="item11_name">Bacalao confitado</span>
+              <span class="menu-item__desc" data-i18n="item11_desc">Pil pil tradicional y pimiento asado</span>
             </div>
-            <span class="menu-item__price">3€</span>
+            <span class="menu-item__price" data-price="470">$470 MXN</span>
           </div>
         </div>
 
-        <p class="menu-note">
-          Precios en euros, impuestos incluidos. Consulte alérgenos con nuestro equipo de sala.
+        <div class="menu-category">
+          <h2 class="menu-category__title" data-i18n="cat_postres">Postres</h2>
+
+          <div class="menu-item">
+            <div>
+              <span class="menu-item__name" data-i18n="item12_name">Tarta de queso al horno</span>
+              <span class="menu-item__desc" data-i18n="item12_desc">Reducción de frutos rojos</span>
+            </div>
+            <span class="menu-item__price" data-price="150">$150 MXN</span>
+          </div>
+
+          <div class="menu-item">
+            <div>
+              <span class="menu-item__name" data-i18n="item13_name">Milhojas de crema</span>
+              <span class="menu-item__desc" data-i18n="item13_desc">Vainilla de Madagascar y caramelo tostado</span>
+            </div>
+            <span class="menu-item__price" data-price="140">$140 MXN</span>
+          </div>
+
+          <div class="menu-item">
+            <div>
+              <span class="menu-item__name" data-i18n="item14_name">Sorbete de cítricos</span>
+              <span class="menu-item__desc" data-i18n="item14_desc">Selección según temporada</span>
+            </div>
+            <span class="menu-item__price" data-price="120">$120 MXN</span>
+          </div>
+        </div>
+
+        <div class="menu-category">
+          <h2 class="menu-category__title" data-i18n="cat_bebidas">Bebidas y vinos</h2>
+
+          <div class="menu-item">
+            <div>
+              <span class="menu-item__name" data-i18n="item15_name">Copa de vino blanco de la casa</span>
+              <span class="menu-item__desc" data-i18n="item15_desc">Selección de bodegas locales</span>
+            </div>
+            <span class="menu-item__price" data-price="110">$110 MXN</span>
+          </div>
+
+          <div class="menu-item">
+            <div>
+              <span class="menu-item__name" data-i18n="item16_name">Copa de albariño</span>
+              <span class="menu-item__desc" data-i18n="item16_desc">Denominación de origen Rías Baixas</span>
+            </div>
+            <span class="menu-item__price" data-price="130">$130 MXN</span>
+          </div>
+
+          <div class="menu-item">
+            <div>
+              <span class="menu-item__name" data-i18n="item17_name">Agua con gas o sin gas</span>
+              <span class="menu-item__desc" data-i18n="item17_desc">Botella de 50cl</span>
+            </div>
+            <span class="menu-item__price" data-price="45">$45 MXN</span>
+          </div>
+        </div>
+
+        <p class="menu-note" data-i18n="menu_note">
+          Precios en pesos mexicanos, impuestos incluidos. Consulte alérgenos con nuestro equipo de sala.
         </p>
 
       </div>
@@ -225,11 +231,11 @@
     <section class="reserve" id="reservas">
       <div class="container">
         <div class="section-heading section-heading--center" style="margin-bottom: 2rem;">
-          <h2>¿Le apetece probarlo?</h2>
-          <p>Reserve su mesa y descubra la carta completa en persona.</p>
+          <h2 data-i18n="menu_cta_title">¿Le apetece probarlo?</h2>
+          <p data-i18n="menu_cta_subtitle">Reserve su mesa y descubra la carta completa en persona.</p>
         </div>
         <div style="display:flex; justify-content:center;">
-          <a href="mailto:reservas@marea.com" class="btn btn--primary">Reservar mesa</a>
+          <a href="#" class="btn btn--primary" data-whatsapp-cta data-i18n="menu_cta_button">Reservar mesa</a>
         </div>
       </div>
     </section>
@@ -241,30 +247,29 @@
       <div class="site-footer__top">
         <div>
           <div class="site-footer__logo">Marea</div>
-          <p class="site-footer__tagline">Cocina de mar, producto fresco.</p>
+          <p class="site-footer__tagline" data-i18n="footer_tagline">Cocina de mar, producto fresco.</p>
         </div>
 
         <nav class="site-footer__nav">
           <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="index.html#nosotros">Nosotros</a></li>
-            <li><a href="menu.html">Menú</a></li>
-            <li><a href="index.html#reservas">Reservas</a></li>
+            <li><a href="index.html" data-i18n="nav_inicio">Inicio</a></li>
+            <li><a href="index.html#nosotros" data-i18n="nav_nosotros">Nosotros</a></li>
+            <li><a href="menu.html" data-i18n="nav_menu">Menú</a></li>
+            <li><a href="index.html#reservas" data-i18n="nav_reservas">Reservas</a></li>
           </ul>
         </nav>
 
         <nav class="site-footer__social">
           <ul>
-            <!-- Sustituir por los enlaces reales a redes sociales -->
-            <li><a href="#" target="_blank" rel="noopener">Instagram</a></li>
-            <li><a href="#" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="https://www.instagram.com/net._.ly?igsh=cXN5MW1randmbnY5&utm_source=qr" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.facebook.com/share/1BLSXnrDD1/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook</a></li>
           </ul>
         </nav>
       </div>
 
       <div class="site-footer__bottom">
-        <span>© 2026 Marea. Todos los derechos reservados.</span>
-        <span>Calle del Puerto 12, Ciudad</span>
+        <span data-i18n="footer_copyright">© 2026 Marea. Todos los derechos reservados.</span>
+        <span>Calle del Puerto 12, Ciudad Juárez, Chihuahua</span>
       </div>
     </div>
   </footer>

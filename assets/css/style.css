@@ -146,6 +146,37 @@ h1, h2, h3, h4 {
   opacity: 1;
 }
 
+.site-header__right {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+}
+
+.lang-switch__btn {
+  opacity: 0.55;
+  transition: opacity var(--ease) 0.25s;
+}
+
+.lang-switch__btn:hover {
+  opacity: 0.85;
+}
+
+.lang-switch__btn.is-active {
+  opacity: 1;
+}
+
+.lang-switch__divider {
+  opacity: 0.4;
+}
+
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -165,6 +196,7 @@ h1, h2, h3, h4 {
 .site-header,
 .site-header .logo,
 .site-header .main-nav a,
+.site-header .lang-switch,
 .site-header .nav-toggle {
   color: var(--color-ivory);
 }
@@ -172,6 +204,7 @@ h1, h2, h3, h4 {
 /* Variante para páginas / estados con fondo claro bajo el encabezado */
 .site-header.on-light .logo,
 .site-header.on-light .main-nav a,
+.site-header.on-light .lang-switch,
 .site-header.on-light .nav-toggle {
   color: var(--color-ink);
 }
