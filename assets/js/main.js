@@ -99,6 +99,11 @@ var TRANSLATIONS = {
     menu_cta_subtitle: 'Reserve su mesa y descubra la carta completa en persona.',
     menu_cta_button: 'Reservar mesa',
 
+    dish_back_to_menu: '‹ Volver al menú',
+    dish_about_label: 'Qué es',
+    dish_ingredients_label: 'Contiene',
+    dish_reserve_cta: 'Reservar por WhatsApp',
+
     whatsapp_message: 'Hola, me gustaría reservar una mesa en Marea.'
   },
 
@@ -197,6 +202,11 @@ var TRANSLATIONS = {
     menu_cta_subtitle: 'Reserve your table and discover the full menu in person.',
     menu_cta_button: 'Reserve a table',
 
+    dish_back_to_menu: '‹ Back to menu',
+    dish_about_label: 'What it is',
+    dish_ingredients_label: 'Contains',
+    dish_reserve_cta: 'Reserve via WhatsApp',
+
     whatsapp_message: 'Hello, I would like to reserve a table at Marea.'
   }
 };
@@ -240,6 +250,71 @@ function applyLanguage(lang) {
     localStorage.setItem('marea-lang', lang);
   } catch (e) {
     /* localStorage no disponible (modo privado, etc.): se ignora, el idioma solo persiste durante la sesión */
+  }
+
+  renderDishDetail(lang);
+}
+
+// Ficha individual de platillo (platillo.html?id=...), solo activa si la página tiene [data-dish-detail].
+function renderDishDetail(lang) {
+  var container = document.querySelector('[data-dish-detail]');
+  if (!container) {
+    return;
+  }
+
+  var id = new URLSearchParams(window.location.search).get('id');
+  var dish = typeof DISH_DETAILS !== 'undefined' ? DISH_DETAILS[id] : null;
+  if (!dish) {
+    window.location.href = 'menu.html';
+    return;
+  }
+
+  var content = dish[lang];
+
+  document.title = content.name + ' — Marea';
+
+  var img = container.querySelector('[data-dish-image]');
+  if (img) {
+    img.src = dish.image;
+    img.alt = content.name;
+  }
+
+  var nameEl = container.querySelector('[data-dish-name]');
+  if (nameEl) {
+    nameEl.textContent = content.name;
+  }
+
+  var taglineEl = container.querySelector('[data-dish-tagline]');
+  if (taglineEl) {
+    taglineEl.textContent = content.tagline;
+  }
+
+  var priceEl = container.querySelector('[data-dish-price]');
+  if (priceEl) {
+    priceEl.textContent = formatPrice(dish.price, lang);
+  }
+
+  var descEl = container.querySelector('[data-dish-description]');
+  if (descEl) {
+    descEl.textContent = content.description;
+  }
+
+  var listEl = container.querySelector('[data-dish-ingredients]');
+  if (listEl) {
+    listEl.innerHTML = '';
+    content.ingredients.forEach(function (item) {
+      var li = document.createElement('li');
+      li.textContent = item;
+      listEl.appendChild(li);
+    });
+  }
+
+  var whatsappEl = document.querySelector('[data-dish-whatsapp]');
+  if (whatsappEl) {
+    var message = TRANSLATIONS[lang].whatsapp_message + ' (' + content.name + ')';
+    whatsappEl.setAttribute('href', 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(message));
+    whatsappEl.setAttribute('target', '_blank');
+    whatsappEl.setAttribute('rel', 'noopener');
   }
 }
 
