@@ -239,5 +239,39 @@ var DISH_DETAILS = {
       description: 'Our house white wine selection, chosen from local wineries, served by the glass.',
       ingredients: ['White wine', 'Local winery']
     }
+  },
+
+  'copa-de-albarino': {
+    image: 'assets/images/platillos/copa-de-albarino.jpg',
+    price: 130,
+    es: {
+      name: 'Copa de albariño',
+      tagline: 'Bebidas y vinos',
+      description: 'Vino blanco albariño con denominación de origen Rías Baixas, fresco y aromático, ideal para acompañar los platos de marisco de la casa.',
+      ingredients: ['Uva albariño', 'Denominación de origen Rías Baixas']
+    },
+    en: {
+      name: 'Albariño, glass',
+      tagline: 'Drinks and wine',
+      description: 'Albariño white wine with Rías Baixas designation of origin, fresh and aromatic, ideal to pair with the house seafood dishes.',
+      ingredients: ['Albariño grape', 'Rías Baixas designation of origin']
+    }
+  },
+
+  'agua-con-gas-o-sin-gas': {
+    image: 'assets/images/platillos/agua-con-gas-o-sin-gas.jpg',
+    price: 45,
+    es: {
+      name: 'Agua con gas o sin gas',
+      tagline: 'Bebidas y vinos',
+      description: 'Botella de agua mineral de 50cl, a elegir con gas o sin gas.',
+      ingredients: ['Agua mineral natural']
+    },
+    en: {
+      name: 'Sparkling or still water',
+      tagline: 'Drinks and wine',
+      description: '50cl bottle of mineral water, choice of sparkling or still.',
+      ingredients: ['Natural mineral water']
+    }
   }
 };
