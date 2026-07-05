@@ -154,5 +154,90 @@ var DISH_DETAILS = {
       description: 'Toasted thin noodles cooked in a seafood sofrito with shrimp, squid, and mussels, served with freshly made homemade aioli.',
       ingredients: ['Thin noodles', 'Shrimp', 'Squid', 'Mussels', 'Tomato sofrito', 'Homemade aioli']
     }
+  },
+
+  'bacalao-confitado': {
+    image: 'assets/images/platillos/bacalao-confitado.jpg',
+    price: 470,
+    es: {
+      name: 'Bacalao confitado',
+      tagline: 'Platos principales',
+      description: 'Lomo de bacalao confitado a baja temperatura en aceite de oliva, terminado con un pil pil tradicional de ajo y servido con pimiento rojo asado.',
+      ingredients: ['Bacalao', 'Aceite de oliva', 'Ajo', 'Pimiento rojo asado', 'Perejil']
+    },
+    en: {
+      name: 'Confit cod',
+      tagline: 'Main courses',
+      description: 'Cod loin confit at low temperature in olive oil, finished with a traditional garlic pil pil and served with roasted red pepper.',
+      ingredients: ['Cod', 'Olive oil', 'Garlic', 'Roasted red pepper', 'Parsley']
+    }
+  },
+
+  'tarta-de-queso-al-horno': {
+    image: 'assets/images/platillos/tarta-de-queso-al-horno.jpg',
+    price: 150,
+    es: {
+      name: 'Tarta de queso al horno',
+      tagline: 'Postres',
+      description: 'Tarta de queso horneada, cremosa por dentro y ligeramente dorada por fuera, cubierta con una reducción de frutos rojos frescos.',
+      ingredients: ['Queso crema', 'Huevo', 'Azúcar', 'Base de galleta', 'Frutos rojos']
+    },
+    en: {
+      name: 'Baked cheesecake',
+      tagline: 'Desserts',
+      description: 'Baked cheesecake, creamy inside and lightly golden outside, topped with a fresh mixed berry reduction.',
+      ingredients: ['Cream cheese', 'Egg', 'Sugar', 'Graham cracker base', 'Mixed berries']
+    }
+  },
+
+  'milhojas-de-crema': {
+    image: 'assets/images/platillos/milhojas-de-crema.jpg',
+    price: 140,
+    es: {
+      name: 'Milhojas de crema',
+      tagline: 'Postres',
+      description: 'Capas de hojaldre crujiente rellenas de crema de vainilla de Madagascar, terminadas con caramelo tostado y frutos rojos frescos.',
+      ingredients: ['Hojaldre', 'Crema de vainilla', 'Caramelo tostado', 'Frambuesa', 'Azúcar glas']
+    },
+    en: {
+      name: 'Cream mille-feuille',
+      tagline: 'Desserts',
+      description: 'Layers of crisp puff pastry filled with Madagascar vanilla cream, finished with toasted caramel and fresh berries.',
+      ingredients: ['Puff pastry', 'Vanilla cream', 'Toasted caramel', 'Raspberry', 'Powdered sugar']
+    }
+  },
+
+  'sorbete-de-citricos': {
+    image: 'assets/images/platillos/sorbete-de-citricos.jpg',
+    price: 120,
+    es: {
+      name: 'Sorbete de cítricos',
+      tagline: 'Postres',
+      description: 'Selección de sorbetes de cítricos de temporada —limón, naranja sanguina y toronja— con un toque de ralladura fresca.',
+      ingredients: ['Limón', 'Naranja sanguina', 'Toronja', 'Azúcar', 'Ralladura de cítricos']
+    },
+    en: {
+      name: 'Citrus sorbet',
+      tagline: 'Desserts',
+      description: 'A selection of seasonal citrus sorbets —lemon, blood orange, and grapefruit— with a touch of fresh zest.',
+      ingredients: ['Lemon', 'Blood orange', 'Grapefruit', 'Sugar', 'Citrus zest']
+    }
+  },
+
+  'copa-de-vino-blanco-de-la-casa': {
+    image: 'assets/images/platillos/copa-de-vino-blanco-de-la-casa.jpg',
+    price: 110,
+    es: {
+      name: 'Copa de vino blanco de la casa',
+      tagline: 'Bebidas y vinos',
+      description: 'Nuestra selección de vino blanco de la casa, elegida entre bodegas locales, servida por copa.',
+      ingredients: ['Vino blanco', 'Bodega local']
+    },
+    en: {
+      name: 'House white wine, glass',
+      tagline: 'Drinks and wine',
+      description: 'Our house white wine selection, chosen from local wineries, served by the glass.',
+      ingredients: ['White wine', 'Local winery']
+    }
   }
 };
