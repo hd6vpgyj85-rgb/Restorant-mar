@@ -86,5 +86,73 @@ var DISH_DETAILS = {
       description: 'Whole wild sea bass baked in a sea salt crust, served with fresh herbs and roasted seasonal vegetables.',
       ingredients: ['Wild sea bass', 'Sea salt', 'Fresh herbs (parsley, thyme)', 'Cherry tomato', 'Asparagus', 'Mushrooms', 'Shallot']
     }
+  },
+
+  'arroz-de-bogavante': {
+    image: 'assets/images/platillos/arroz-de-bogavante.jpg',
+    price: 580,
+    es: {
+      name: 'Arroz de bogavante',
+      tagline: 'Especialidades del mar',
+      description: 'Arroz meloso cocinado a fuego lento en cazuela de barro con bogavante entero, tomate y un fondo de marisco. Se sirve para compartir en el centro de la mesa.',
+      ingredients: ['Bogavante', 'Arroz', 'Tomate', 'Fondo de marisco', 'Ajo', 'Pimentón']
+    },
+    en: {
+      name: 'Lobster rice',
+      tagline: 'Seafood specialties',
+      description: 'Creamy rice slow-cooked in a clay pot with whole lobster, tomato, and a seafood stock. Served to share at the center of the table.',
+      ingredients: ['Lobster', 'Rice', 'Tomato', 'Seafood stock', 'Garlic', 'Paprika']
+    }
+  },
+
+  'seleccion-de-marisco-frio': {
+    image: 'assets/images/platillos/seleccion-de-marisco-frio.jpg',
+    price: 460,
+    es: {
+      name: 'Selección de marisco frío',
+      tagline: 'Especialidades del mar',
+      description: 'Una torre de marisco fresco sobre hielo: ostras, camarón, langostino y centolla, acompañados de mignonette y salsa cóctel. Ideal para compartir como entrada generosa.',
+      ingredients: ['Ostras', 'Camarón', 'Langostino', 'Centolla', 'Mignonette', 'Salsa cóctel']
+    },
+    en: {
+      name: 'Chilled seafood selection',
+      tagline: 'Seafood specialties',
+      description: 'A tower of fresh seafood on ice: oysters, shrimp, prawns, and spider crab, served with mignonette and cocktail sauce. Ideal to share as a generous starter.',
+      ingredients: ['Oysters', 'Shrimp', 'Prawns', 'Spider crab', 'Mignonette', 'Cocktail sauce']
+    }
+  },
+
+  'merluza-a-la-brasa': {
+    image: 'assets/images/platillos/merluza-a-la-brasa.jpg',
+    price: 480,
+    es: {
+      name: 'Merluza a la brasa',
+      tagline: 'Platos principales',
+      description: 'Lomo de merluza a la brasa sobre un caldo de salsa verde con almejas de temporada, ajo y perejil. Un plato principal ligero que resalta el sabor del pescado blanco.',
+      ingredients: ['Merluza', 'Almejas', 'Perejil', 'Ajo', 'Vino blanco', 'Aceite de oliva']
+    },
+    en: {
+      name: 'Grilled hake',
+      tagline: 'Main courses',
+      description: 'Grilled hake loin over a green sauce broth with seasonal clams, garlic, and parsley. A light main course that highlights the flavor of white fish.',
+      ingredients: ['Hake', 'Clams', 'Parsley', 'Garlic', 'White wine', 'Olive oil']
+    }
+  },
+
+  'fideua-de-marisco': {
+    image: 'assets/images/platillos/fideua-de-marisco.jpg',
+    price: 420,
+    es: {
+      name: 'Fideuá de marisco',
+      tagline: 'Platos principales',
+      description: 'Fideos finos tostados y cocinados en un sofrito de marisco con camarón, calamar y mejillón, servidos con alioli casero recién hecho.',
+      ingredients: ['Fideo fino', 'Camarón', 'Calamar', 'Mejillón', 'Sofrito de tomate', 'Alioli casero']
+    },
+    en: {
+      name: 'Seafood fideuá',
+      tagline: 'Main courses',
+      description: 'Toasted thin noodles cooked in a seafood sofrito with shrimp, squid, and mussels, served with freshly made homemade aioli.',
+      ingredients: ['Thin noodles', 'Shrimp', 'Squid', 'Mussels', 'Tomato sofrito', 'Homemade aioli']
+    }
   }
 };
